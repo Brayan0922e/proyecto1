@@ -66,7 +66,7 @@ public class Main {
 
         while (continuar) {
 
-            System.out.println("\n--- REGISTRO DE EMPLEADO ---");
+            System.out.println("\n REGISTRO DE EMPLEADO ");
             System.out.print("Nombre del empleado: ");
             String nombre = sc.nextLine();
 
@@ -83,14 +83,14 @@ public class Main {
             Empleado emp = new Empleado(nombre, cargo, sueldoBase, horasExtras);
             empleados.add(emp);
 
-            System.out.print("¿Desea registrar otro empleado? (s/n): ");
+            System.out.print("Desea registrar otro empleado? (s/n): ");
             String resp = sc.nextLine();
             if (!resp.equalsIgnoreCase("s")) {
                 continuar = false;
             }
         }
 
-        System.out.println("\n\n RESULTADOS DE NÓMINA ");
+        System.out.println("\n\n RESULTADOS DE NOMINA ");
         double totalNomina = 0;
 
         for (Empleado emp : empleados) {
@@ -105,11 +105,11 @@ public class Main {
             System.out.println("Cargo: " + emp.getCargo());
             System.out.println("Sueldo Base: $" + emp.getSueldoBase());
             System.out.println("Pago por Horas Extras: $" + pagoExtras);
-            System.out.println("Descuento Retención: $" + retencion);
+            System.out.println("Descuento Retencion: $" + retencion);
             System.out.println("Descuento Seguridad Social: $" + seguridad);
             System.out.println("Salario Neto: $" + salarioNeto);
         }
 
-        System.out.println("\nTOTAL NÓMINA A PAGAR POR LA EMPRESA: $" + totalNomina);
+        System.out.println("\nTOTAL NOMINA A PAGAR POR LA EMPRESA: $" + totalNomina);
     }
 }
